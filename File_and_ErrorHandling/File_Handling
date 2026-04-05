@@ -1,0 +1,53 @@
+FILE HANDLING (Real Understanding)
+
+What is file handling?
+
+It’s how your program:
+
+Reads data from files 
+Writes data to files 
+Stores results permanently 
+
+
+ Opening a file
+file = open("example.txt", "r")
+
+Modes (IMPORTANT)
+"r" → read
+"w" → write (overwrites ⚠️)
+"a" → append
+"x" → create new file
+"b" → binary (images, etc.)
+
+📖 Reading a file
+file = open("example.txt", "r")
+
+content = file.read()
+print(content)
+file.close()
+
+✍️ Writing to a file
+file = open("example.txt", "w")
+file.write("Hello bro!")
+file.close()
+
+⚠️ "w" deletes old content — beginners make this mistake a LOT.
+
+➕ Appending (safe writing)
+file = open("example.txt", "a")
+
+file.write("\nNew line added")
+
+file.close()
+💎 PRO WAY (Always use this)
+with open("example.txt", "r") as file:
+    content = file.read()
+    print(content)
+Why this is better?
+Automatically closes file ✅
+Cleaner code ✅
+Used in real projects ✅
+📚 Reading line by line
+with open("example.txt", "r") as file:
+    for line in file:
+        print(line.strip())
