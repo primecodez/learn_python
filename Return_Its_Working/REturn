@@ -1,0 +1,23 @@
+Return:
+
+
+
+working:
+return skips the part before return 
+for example
+
+def f(n):
+    if n == 0:
+        return 0
+    print(n)
+    return f(n-1)
+
+f(2)
+
+
+prints 
+2
+1
+
+
+here 👉 0 is returned, NOT printed
