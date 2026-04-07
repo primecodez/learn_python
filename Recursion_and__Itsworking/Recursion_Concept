@@ -1,0 +1,23 @@
+RECURSION:
+
+
+
+REcursive Call:
+Function name inside tthe same function name 
+like eg 
+def fun(n):
+    if n == 0:
+        return
+    print(n)
+    fun(n-1)   # 👈 recursive call
+
+    Why?
+
+Function name = fun
+Inside it → fun(n-1)
+👉 Same name → recursive call
+
+🔥 Golden Rule
+Code Position	Meaning
+print() BEFORE recursive call ---recursion	prints while going DOWN
+print() AFTER  recursive call----recursion	prints while coming BACK
