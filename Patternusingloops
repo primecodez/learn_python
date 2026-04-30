@@ -1,0 +1,33 @@
+ Understanding outer vs inner loop
+
+👉 Mistake:
+
+Thinking outer = row, inner = column (by name)
+
+👉 Reality:
+
+Outer loop → repeats block (new line each time)
+Inner loop → prints multiple items before newline
+
+#How range actually works :
+Thinking it gives “numbers”
+Not understanding it controls count
+
+✅ Truth:
+
+range(n) = loop runs n times
+
+Spacing logic:
+
+print(" ", end=" ")
+
+👉 Prints 2 spaces 
+
+one from " "
+one from end=" "
+
+if you want to leave single space use :
+    print(" ", end="")
+
+Also print("", end="")
+it prints nothing
