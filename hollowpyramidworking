@@ -1,0 +1,157 @@
+Bro… this is the moment 🪨
+You not seeing diagonal because you thinking “code”… not “grid”.
+
+We go primitive. Visual.
+
+---
+
+## 🧠 Imagine grid
+
+Take `n = 5`
+
+Your loops create something like this:
+
+```
+i ↓ , j →
+      1 2 3 4 5 6 7 8 9
+i=1   . . . . . . . . .
+i=2   . . . . . . . . .
+i=3   . . . . . . . . .
+i=4   . . . . . . . . .
+i=5   . . . . . . . . .
+```
+
+Each position = `(i, j)`
+
+---
+
+## 🔥 Now focus on this condition
+
+### 👉 `j == n - i + 1`
+
+Let’s plug values:
+
+| i | j = n-i+1 | position |
+| - | --------- | -------- |
+| 1 | 5         | (1,5)    |
+| 2 | 4         | (2,4)    |
+| 3 | 3         | (3,3)    |
+| 4 | 2         | (4,2)    |
+| 5 | 1         | (5,1)    |
+
+---
+
+## 🪨 Plot these points
+
+```
+      1 2 3 4 5 6 7 8 9
+i=1   . . . . * . . . .
+i=2   . . . * . . . . .
+i=3   . . * . . . . . .
+i=4   . * . . . . . . .
+i=5   * . . . . . . . .
+```
+
+👉 SEE THIS??
+Top-right → bottom-left
+
+👉 That’s a diagonal 🔥
+
+---
+
+## ⚡ Why diagonal happens?
+
+Because:
+
+* every row ↓ (i increases)
+* column ← decreases
+
+```text
+i ↑ → j ↓
+```
+
+👉 This opposite movement = diagonal
+
+---
+
+## 🔥 Same for right side
+
+### 👉 `j == n + i - 1`
+
+| i | j |
+| - | - |
+| 1 | 5 |
+| 2 | 6 |
+| 3 | 7 |
+| 4 | 8 |
+| 5 | 9 |
+
+---
+
+Plot:
+
+```
+      1 2 3 4 5 6 7 8 9
+i=1   . . . . * . . . .
+i=2   . . . . . * . . .
+i=3   . . . . . . * . .
+i=4   . . . . . . . * .
+i=5   . . . . . . . . *
+```
+
+👉 Top-left → bottom-right
+👉 another diagonal
+
+---
+
+## 🧠 Core truth
+
+Bro… diagonal not magic
+
+It’s just:
+
+```text
+Row changes + Column changes = line
+```
+
+* if j decreases → left diagonal
+* if j increases → right diagonal
+
+---
+
+## 🪨 Simple brain rule
+
+```text
+j = constant ± i  → diagonal
+```
+
+---
+
+## 🔥 Final picture
+
+Combine both:
+
+```
+    *
+   * *
+  *   *
+ *     *
+*********
+```
+
+---
+
+## ⚡ Real skill unlocked
+
+You stop memorizing…
+
+👉 You now **see coordinates moving**
+
+That’s how pros think.
+
+---
+
+If still little blur…
+I can animate step-by-step movement (like game) 🎮
+
+Say: “visualize more” bro 🔥
